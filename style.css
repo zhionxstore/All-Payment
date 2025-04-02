@@ -1,0 +1,61 @@
+body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 24px;
+            opacity: 0;
+            animation: slideDown 1s ease-in-out forwards;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: slideUp 1s ease-in-out forwards 0.5s;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            padding: 10px;
+            margin: 10px auto;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.3s;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 0.8s ease-in-out forwards 1s;
+        }
+        .blue { background-color: #007bff; }
+        .green { background-color: #28a745; }
+        .button:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
