@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Display</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+  <h2>QR Code WhatsApp</h2>
+  <canvas id="qrCanvas"></canvas>
+
+  <script>
+    const url = "https://wa.me/6281234567890";
+    const canvas = document.getElementById('qrCanvas');
+
+    QRCode.toCanvas(canvas, url, function (error) {
+      if (error) console.error(error);
+      console.log('QR code generated!');
+    });
+  </script>
+</body>
+</html>
